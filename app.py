@@ -3,7 +3,7 @@ import streamlit as st
 # Configuración de la página
 st.set_page_config(page_title="Academia Deportiva", page_icon="⚽", layout="wide")
 
-# Estilos CSS para que se vea elegante
+# Estilos CSS
 st.markdown("""
     <style>
     .stButton>button {width: 100%; border-radius: 5px; background-color: #004d40; color: white;}
@@ -23,7 +23,8 @@ if 'usuario_logueado' not in st.session_state:
 col1, col2 = st.columns([1, 1])
 
 with col1:
-    st.image("https://images.unsplash.com/photo-1517466787929-bc90951d0974?q=80&w=800", caption="Metodología Profesional")
+    # Imagen actualizada
+    st.image("https://images.unsplash.com/photo-1517927033932-b3d18e61fb3a?q=80&w=1200", caption="Estrategia y Análisis Deportivo")
     st.info("👈 Si ya iniciaste sesión, despliega el menú lateral (arriba a la izquierda) para ver los Temas.")
 
 with col2:
@@ -32,7 +33,7 @@ with col2:
         st.write("Ingresa tu correo para desbloquear los contenidos.")
         
         email = st.text_input("Correo electrónico")
-        # Aquí podrías poner una contraseña real más adelante
+        
         if st.button("Ingresar al Curso"):
             if email:
                 st.session_state['usuario_logueado'] = True
